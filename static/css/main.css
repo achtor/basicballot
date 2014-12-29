@@ -1,0 +1,101 @@
+/* CHICAGO BLUE IS #B3DDF2 */
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+   font-family: "Open Sans", sans-serif;
+}
+
+#content {
+
+}
+
+#map {
+   width: 450px;
+   height: 500px;
+   margin-top: 20px;
+   max-width: 100%;
+   background: white;
+   margin: 10px auto;
+}
+
+#main {
+   position: absolute;
+   top: 150px;
+   left: 40%;
+}
+
+input#address {
+   height: 25px;
+   width: 300px;
+   font-size: 18px;
+   background: #B3DDF2;
+   opacity: 0.9;
+   border-style:solid;
+   border-radius:5px;
+   border-width:1px;
+   border-color:#CCCCFF;
+}
+
+input#address:focus {
+   opacity: 1.0;
+   border-width:2px;
+   border-color: #8363AE;
+}
+
+input#submit {
+   height: 30px;
+   color: #B3DDF2;
+   background-color: #8363AE;
+   border: none;
+   border-radius: 2px;
+   opacity: 1.0;
+   padding: 2px;
+   font-size: 18px;
+   font-weight: bold;
+}
+
+input#submit:active {
+   opacity: 0.7;
+}
+
+ul { list-style: none; }
+
+#logo { float: left; width: 400px; max-width: 100%; }
+
+#menu { float: right;  font-size: 40px; }
+
+#menu li, #links li { 
+   display: inline-block; 
+}
+
+#menu li a, #links li a { 
+   display: block;
+   color: #777777;
+   background-color: #FFFFFF;
+   border-radius: 10px;
+   transition: background-color 0.5s;
+}
+
+#menu li a:hover, #links li a:hover {
+   color: #FFFFFF;
+   background-color: #8363AE;
+}
+
+#menu li a { padding: 10px; margin: 5px;}
+
+#links li a { padding: 5px; }
+
+#links {
+   font-size: 14px;
+   position: absolute;
+   bottom: 0;
+   left: 5px;
+}

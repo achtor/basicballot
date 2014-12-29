@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Basic Ballot</title>
+<link rel="stylesheet" href="../static/css/main.css">
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+   $SCRIPT_ROOT = {{ request.script_root|tojson|safe }}
+</script>
+
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script type="text/javascript" src="../static/js/main.js"></script>
+
+</head>
+<body>
+<div id="content">
+<img src="../static/img/logo.jpg" id="logo">
+
+<div id="menu">
+<ul>
+<li><a href="#" id="sample">sample ballot</a></li>
+<li><a href="#" id="custom">my custom ballot</a></li>
+</ul>
+</div>
+
+<div id="main">
+<input type="text" name="address" id="address">
+<input type="submit" id="submit" value="Get your ballot!">
+
+<div id="map"></div>
+
+<script tye="text/javascript">
+function initialize() {
+   var layer = new L.StamenTileLayer('toner-hybrid');
+   map = new L.Map('map', {
+      zoomControl:false,
+      dragging: true,
+      touchZoom: false,
+      scrollWheelZoom: false,
+      doubleClickZoom: false,
+      boxZoom: false,
+      keyboard: true,
+      attributionControl: false,
+      center: new L.LatLng(41.846154, -87.634309),
+      zoom: 12
+   });
+   map.addLayer(layer);  
+}
+
+</script>
+</div>
+
+<div id="sampletab">
+
+</div>
+
+<div id="customtab">
+
+</div>
+
+<script type="text/javascript">
+$('a#sample').click(function() {
+});
+
+$('a#custom').click(function() {
+   
+});
+
+$('#submit').click(codeAddress);
+</script>
+
+<div id="links">
+<ul>
+<li><a href="about">about us</a></li>
+<li><a href="team">team</a></li>
+<li><a href="help">faq</a></li>
+<li><a href="blog">blog</a></li>
+<li><a href="press">press</a></li>
+</div>
+</div>
+</body>
+</html>
