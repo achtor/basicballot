@@ -11,5 +11,11 @@ def root():
 def geocode():
    return str(Geocoder.geocode(request.args.get('address'))[0].coordinates)
 
+@app.route('/_precinct')
+def precinct():
+   # take in coordinates through GET (POST?) and return either:
+   # the corresponding geojson feature from Precincts.geojson, or
+   # some kind of json error message if none exists
+
 if __name__ == '__main__':
    app.run()
